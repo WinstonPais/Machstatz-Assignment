@@ -14,6 +14,10 @@ from .Solutions.question3 import getresult
 PARENT_DIR = Path(__file__).resolve().parent
 
 # Create your views here.
+def index(request):
+    return render(request, 'index.html')
+
+
 def question1(request):
 
     path_to_json_file = PARENT_DIR.joinpath('JsonData','sample_json_1.json')
@@ -77,6 +81,9 @@ def question3(request):
     with open(path_to_json_file) as f:
         data = json.load(f)
 
-    result_list = getresult(start_time, end_time, data)
+    result_list = []
+
+    if start_time and end_time:
+        result_list = getresult(start_time, end_time, data)
     
     return JsonResponse(result_list, safe=False)

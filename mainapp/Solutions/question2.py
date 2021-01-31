@@ -31,4 +31,7 @@ def displayTime(time):
 
 
 def getUtilization(runtime, downtime):
-    return ( runtime.seconds/(runtime.seconds + downtime.seconds) ) * 100
+    if runtime.seconds + downtime.seconds:
+        return ( runtime.seconds/(runtime.seconds + downtime.seconds) ) * 100
+    else:
+        return 0
