@@ -2,7 +2,6 @@
 # $ conda create --name <env> --file <this file>
 # platform: win-64
 asgiref==3.3.1
-ca-certificates==2021.1.19
 certifi==2020.12.5
 django==3.1.5
 gunicorn==20.0.4
@@ -17,9 +16,7 @@ setuptools==52.0.0
 sqlite==3.33.0
 sqlparse==0.4.1
 tk==8.6.10
-tzdata==2020f
 vc==14.2
-vs2015_runtime
 wheel==0.36.2
 wincertstore==0.2
 zlib==1.2.11
